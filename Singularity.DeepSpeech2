@@ -1,0 +1,22 @@
+Bootstrap:docker
+From:ubuntu:latest
+
+%labels
+MAINTAINER xuzhaoqing
+
+%post
+        apt-get update
+        apt-get install -y cmake \
+                           git \
+                           python2.7 \
+                           python-pip \
+                           gcc \
+                           pkg-config \
+                           libflac-dev \
+                           libogg-dev  \
+                           libvorbis-dev \
+                           libboost-dev \
+                           swig
+        pip install paddlepaddle-gpu
+
+
