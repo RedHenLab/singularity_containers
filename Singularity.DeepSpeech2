@@ -5,8 +5,8 @@ From:ubuntu:latest
         MAINTAINER xuzhaoqing
 
 %environment
-        LANG=en_US.UTF-8
-        export LANG
+        LC_ALL=en_US.UTF-8
+        export LC_ALL
 
 %post
         apt-get update
