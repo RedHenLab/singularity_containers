@@ -11,7 +11,8 @@ From:ubuntu:latest
 
 %post
         apt-get update
-        apt-get install -y cmake \
+        apt-get install -y apt-utils \
+                           cmake \
                            locales \
                            language-pack-en \
                            git \
@@ -24,6 +25,9 @@ From:ubuntu:latest
                            libvorbis-dev \
                            libboost-dev \
                            swig
+                           wget
+                           tar
+                           
         locale-gen en_US.UTF-8 && dpkg-reconfigure locales
         pip install paddlepaddle-gpu
 
