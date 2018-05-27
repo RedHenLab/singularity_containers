@@ -22,8 +22,8 @@ From:ubuntu:latest
                            libogg-dev  \
                            libvorbis-dev \
                            libboost-dev \
-                           swig         \                 
-			   wget		\
+                           swig \                 
+			   wget \
 		           doxygen
 #Manually compile flac-1.3.2  
         wget http://downloads.xiph.org/releases/flac/flac-1.3.2.tar.xz   
