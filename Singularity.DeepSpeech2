@@ -24,21 +24,10 @@ From:ubuntu:latest
                            libogg-dev  \
                            libvorbis-dev \
                            libboost-dev \
-                           swig \
-                           tar \
-                           wget
+                           swig
                            
         locale-gen en_US.UTF-8 && dpkg-reconfigure locales
         pip install paddlepaddle-gpu
-
-# It's not clear we need this manual install
-#        wget http://downloads.xiph.org/releases/flac/flac-1.3.2.tar.xz   
-#        tar -xvf flac-1.3.2.tar.xz
-#        cd flac-1.3.2
-#        ./configure --prefix=$HOME/usr --disable-ogg
-#        make
-#        make install
-#        cd          
 
 # Get DeepSpeech2 via PaddlePaddle
         git clone https://github.com/PaddlePaddle/DeepSpeech.git
