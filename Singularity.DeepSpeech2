@@ -24,8 +24,8 @@ From:ubuntu:latest
                            libogg-dev  \
                            libvorbis-dev \
                            libboost-dev \
-                           swig
-                           wget
+                           swig \
+                           wget \
                            tar
                            
         locale-gen en_US.UTF-8 && dpkg-reconfigure locales
