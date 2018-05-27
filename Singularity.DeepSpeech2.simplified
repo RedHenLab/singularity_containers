@@ -1,3 +1,4 @@
+
 Bootstrap:docker
 From:ubuntu:latest
 
@@ -24,38 +25,23 @@ From:ubuntu:latest
                            libvorbis-dev \
                            libboost-dev \
                            swig \
-			   wget \
-                           doxygen
-			   
-# Manually compile flac-1.3.2  
-#        wget http://downloads.xiph.org/releases/flac/flac-1.3.2.tar.xz   
-#        tar -xvf flac-1.3.2.tar.xz
-#	cd flac-1.3.2
-#	./configure --prefix=$HOME/usr --disable-ogg
-#	make
-#	make install    
-#	cd
-        
-# Manually compile libmkldnn.so (cf. https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=895729)
-        git clone https://github.com/01org/mkl-dnn.git
-	cd mkl-dnn
-	cd scripts && ./prepare_mkl.sh && cd ..
-	mkdir -p build && cd build && cmake .. && make && make install
-	cd src
-	cp libmkldnn.so.0.14.0 /usr/lib/libmkldnn.so.0.14.0
-	cd /usr/lib
-	ln -s libmkldnn.so.0.14.0 libmkldnn.so.0
-	ln -s libmkldnn.so.0 libmkldnn.so
-	ldconfig
-	cd 
-  
-        locale-gen en_US.UTF-8 && dpkg-reconfigure locales
-        pip install paddlepaddle-gpu
+                           wget \
+                           doxygen \
+			   git-buildpackage \
+			   debhelper
 
+        locale-gen en_US.UTF-8 && dpkg-reconfigure locales
+
+# Compile mkl-dnn from pending Debian package
+	git clone https://salsa.debian.org/science-team/mkl-dnn
+	cd mkl-dnn
+	gbp buildpackage
+  
 # Get DeepSpeech2 via PaddlePaddle
-        git clone https://github.com/PaddlePaddle/DeepSpeech.git
-        cd DeepSpeech
-        sh setup.sh 
+#        pip install paddlepaddle-gpu
+#        git clone https://github.com/PaddlePaddle/DeepSpeech.git
+#        cd DeepSpeech
+#        sh setup.sh 
 
 # Notes
 
