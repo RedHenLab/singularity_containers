@@ -11,8 +11,7 @@ From:ubuntu:latest
 
 %post
         apt-get update
-        apt-get install -y apt-utils \
-                           cmake \
+        apt-get install -y cmake \
                            locales \
                            language-pack-en \
                            git \
