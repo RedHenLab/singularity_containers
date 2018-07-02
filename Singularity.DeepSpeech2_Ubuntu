@@ -60,5 +60,5 @@ From:ubuntu:latest
 
 # There may be an issue if you want to run Jupyter Notebook from the Singularity image -- here's a hint for a workaround:
 # Solve Jupyter permission issue
-#    CMD unset XDG_RUNTIME_DIR && \
+#    CMD unset XDG_RUNTIME_DIR && \ 
 #    jupyter notebook --port=12220 --no-browser
