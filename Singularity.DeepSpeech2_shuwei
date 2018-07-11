@@ -1,5 +1,5 @@
 Bootstrap:docker 
-From:cherubsuwi/deepspeech2:latest-noavx
+From:paddlepaddle/deep_speech:latest-gpu
 
 %labels
         MAINTAINER Shuwei Xu
@@ -10,4 +10,4 @@ From:cherubsuwi/deepspeech2:latest-noavx
 
 %post
 
-# Test for July,11 2018
+
