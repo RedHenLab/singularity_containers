@@ -9,3 +9,5 @@ From:cherubsuwi/deepspeech2:latest-noavx
         export HOME="/mnt/rds/redhen/gallina/Singularity/DeepSpeech2/DeepSpeech"
 
 %post
+
+# Test for July,11 2018
