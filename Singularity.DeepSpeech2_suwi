@@ -10,7 +10,7 @@ From:paddlepaddle/paddle:latest-noavx-openblas
 
 %post
         apt-get update
-        apt-get install pkg-config \
+        apt-get install -y pkg-config \
         libflac-dev \
         libogg-dev  \
         libvorbis-dev \
