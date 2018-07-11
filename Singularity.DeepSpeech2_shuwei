@@ -1,5 +1,5 @@
 Bootstrap:docker 
-From:cherubsuwi/deepspeech2:latest
+From:cherubsuwi/deepspeech2:latest-noavx
 
 %labels
         MAINTAINER Shuwei Xu
