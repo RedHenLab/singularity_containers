@@ -1,5 +1,5 @@
 Bootstrap:docker 
-From:paddlepaddle/paddle:latest-noavx-openblas
+From:cherubsuwi/deepspeech2:latest
 
 %labels
         MAINTAINER Shuwei Xu
@@ -9,15 +9,3 @@ From:paddlepaddle/paddle:latest-noavx-openblas
         export HOME="/mnt/rds/redhen/gallina/Singularity/DeepSpeech2/DeepSpeech"
 
 %post
-        apt-get update
-        apt-get install -y pkg-config \
-                           libflac-dev \
-                           libogg-dev  \
-                           libvorbis-dev \
-                           libboost-dev \
-                           swig
-
-# Get DeepSpeech2 via PaddlePaddle
-        git clone https://github.com/PaddlePaddle/DeepSpeech.git
-        cd DeepSpeech
-        sh setup.sh
