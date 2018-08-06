@@ -2,7 +2,7 @@ Bootstrap:docker
  From:ubuntu:latest
 
  %labels
-         MAINTAINER liontooth
+         MAINTAINER yaojiaweiAlex
 
  %environment
          export LANGUAGE=en_US.UTF-8
