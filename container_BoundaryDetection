@@ -1,0 +1,32 @@
+Bootstrap:docker
+From:ubuntu:latest
+
+%labels
+        MAINTAINER liontooth
+
+%environment
+        export LANGUAGE=en_US.UTF-8
+        export LANG=en_US.UTF-8
+        export LC_ALL=en_US.UTF-8
+
+%post
+        apt-get update
+        apt-get install python3 \
+                        pip3    \
+                        ffmpeg  \
+
+        pip3 install    numpy         \
+                        scikit-learn  \
+                        keras         \
+                        librosa       \
+                        nltk          \
+                        matplotlib    \
+                        h5py          \
+                        opencv-python \
+
+
+        git clone https://github.com/awani216/BoundaryDetection.git
+
+        cd BoundaryDetection/codes
+
+        python3 showSegmentation.py --video ""
