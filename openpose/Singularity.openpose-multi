@@ -142,4 +142,4 @@ From: nvcr.io/nvidia/caffe:20.03-py3
 
 
 %runscript
-    cd $OPENPOSE && exec $OPENPOSE_BIN "$@"
+    cd $OPENPOSE_SRC && exec $OPENPOSE_BIN "$@"
